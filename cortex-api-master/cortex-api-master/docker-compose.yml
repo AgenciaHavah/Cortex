@@ -1,0 +1,11 @@
+version: '3.2'
+
+services:
+    app:
+        build: .
+        container_name: cortex-api
+        ports:
+            - '3300:3300'
+        command: node dist/index.js
+        environment:
+            NODE_ENV: production
